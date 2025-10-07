@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <!-- 文本框，不换行 -->
+    <label>文本框：<input type="text"></label>
+    <br>
+    <!-- 密码框,为..... -->
+     <!-- <label for=""></label>label标签可前可后 -->
+     <label for="mima">密码框</label>
+     <input type="password" id="mima">
+     <br>
+     <!-- 单选框 -->
+     <input type="radio"><input type="radio"><br>
+     <!-- 多选框 -->
+      <input type="checkbox"><br>
+      <input type="checkbox"><br>
+      <input type="checkbox">吵闹瓦格纳饿的话就把手机号哦<br>
+      <!-- 上传文件 -->
+      <input type="file"><br>
+      <!-- 占位文本 placeholder-->
+       <input type="text" placeholder="手机号"><br>
+       <input type="password" placeholder="密码"><br>
+       <!-- 单选功能即只选一个 name=""-->
+        <!-- checked为默认选中 -->
+        性别：
+        <input type="radio" name="刚锅" checked>男
+        <input type="radio" name="刚锅">女<br>
+        <!-- 上传多个文件：multiple -->
+        <input type="file" multiple><br>
+        <!-- 多选框 -->
+         <input type="checkbox" id="yueyue">
+         <label for="yueyue">越越</label>
+         <br>
+         <input type="checkbox">小陶陶<br>
+         <input type="checkbox">牛牛<br>
+         <!-- 下拉菜单,selected为默认选中 -->
+          省份：
+          <select>
+            <option>江苏</option>
+            <option selected>湖南</option>
+            <option>广西</option>
+          </select><br>
+    <!-- 文本域 右下角可拉伸，但拉伸一般禁用-->
+    <textarea>写下你的评论</textarea><br>
+    <!-- label标签，增大点击范围  -->
+     <!-- 完整写法 -->
+     <input type="radio" name="gangguo" id="nan">
+     <label for="nan">男</label>
+     <!-- 简单写法<label><input type="radio">...</label> -->
+     <label><input type="radio" name="gangguo">女</label><br>
+     <!-- 按钮 -->
+      <!-- submit为提交按钮,需要将数据发送至后台，省略type属性值时，默认为提交功能-->
+       <!-- <form action="">form标签要包含需要按钮的功能的程序段，action为发送数据的地址</form> -->
+       <form action="">
+       文本框:<input type="text"><br>
+       密码框:<input type="password"><br>
+      <button type="submit">提交按钮</button>
+      <!-- 重置按钮，要实现重置功能，需要加form标签 -->
+       <button type="reset">重置</button>
+       <button type="button">普通按钮</button>
+       <!-- button为普通按钮,需配合JavaScript使用 -->
+       </form>
+  <!-- div独占一行 -->
+  <div>v耐腐蚀你</div>
+  <div>初步阿文部分</div>
+  <div><img src="./su7_1.jpg"></div>
+  <!-- span标签不换行 -->
+  <span>初步啊v吧</span>
+  <span>出版社vi十多年</span>
+  <span><img src="./青花瓷.jpg"></span>
+  <!-- 字符实体：显示预留字符，以分号结尾 -->
+   <!-- 在代码中写空格，在网页中只识别一个 -->
+    <!-- &nbsp;为空格 -->
+    魔道&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;祖师<br>
+    <!-- &lt;为小于号，&gt;为大于号； -->
+    &lt;p&gt;
+</body>
+</html>

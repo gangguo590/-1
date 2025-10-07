@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS第六天</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+     <style>
+        /* 通配符 */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        div{
+            /* 定位效果 */
+            /* 相对定位：改变位置的参照物是自己原来是位置。并且不脱标，原来的位置还是自己的,占位。标签显示模式不变。 */
+            /* position: relative; */
+            /* 边偏移属性 */
+            /* top: 100px; */
+            /* left: 200px; */
+        }
+        .news{
+            /* 绝对定位 */
+            /* 父级相对 */
+            position: relative;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            background-color: #ec0606;
+            overflow: hidden;
+        }
+        .news .top{
+            height: 100px;
+            overflow: hidden;
+        }
+        .news span{
+            /* 绝对定位：子绝父相。  1、脱标，不占位置  2、改变位置的参照物是父级  3、如果父级没有相对定位，子级的位置参照物变为整个浏览器   4、显示模式改变，具备了行内块的显示特点。 */
+            /* 子级绝对 */
+            position: absolute;
+            /* 加边偏移属性 */
+            top: 0;
+            left: 0;
+            /* transform: translate(-50%,-50%); */
+            display: block;
+            width: 92px;
+            height: 32px;
+            background-color: #0befc5;
+            text-align: center;
+            line-height: 32px;
+            border-radius: 20px;
+        }
+        .pic{
+            /* 居中定位 */
+            /* 此处没有父级，没有相对定位，是针对整个浏览器来定位的 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* margin写法 */
+            /* margin-left: -229.5px;
+            margin-top: -223px; */
+            /* transform写法:推荐 */
+            transform: translate(-50%,-50%);
+        }
+        .fengmian{
+            width: 100px;
+            height: 200px;
+            /* 固定定位：1、脱标，不占位置  2、参照物为浏览器    3、显示模式：具备行内块显示特点 */
+            position: fixed;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+        }
+        /* .p1{
+            position: fixed;
+        } */
+        .duidie{
+            position: relative;
+        }
+        .duidie .box1,
+        .duidie .box2{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            /* 现在是蓝色压在绿色上 */
+            /* z-index取值为整数，默认为0，值越大显示顺序越靠上 */
+            /* z-index: 10; */
+            background-color: #45e50b;
+            left: 100px;
+        }
+        .box2{
+            /* position: absolute; */
+            background-color: #0bc1e5;
+            left: 50px;
+            top: 50px;
+        }
+        /* CSS精灵：移动小图，显示自己想要看到的区域 */
+        .jingling{
+            margin-top: 400px;
+            width: 112px;
+            height: 110px;
+            background-color: #0ac1eb;
+            background-image: url(./图片/mdao1.jpg);
+            background-position: -125px -25px;
+            /* position: fixed; */
+        }
+        .servers{
+            left: 50%;
+            top: 0;
+            transform: translate(-50%,0);
+            width: 1190px;
+            height: 42px;
+            background-color: #fff;
+            margin: 0 auto;
+            position: fixed;
+        }
+        .servers ul{
+            display: flex;
+        }
+        .servers li{
+            display: flex;
+            align-items: center;
+            width: 297px;
+            height: 42px;
+            background-color: #fff;
+            padding-left: 40px;
+        }
+        /* 精灵 */
+        .servers li h4{
+            width: 36px;
+            height: 42px;
+            background-image: url(./图片/mdao1.jpg);
+            background-position: -125px -25px;
+            margin-right: 10px;
+        }
+        .servers li:nth-child(2) h4{
+            border-radius: 10px;
+            background: url(./图片/小米/小/封面.png) -125px -125px;
+        }
+        .servers li p{
+            color: #444;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 42px;
+        }
+        /* 字体图标 */
+        .iconfont{
+            font-size: 50px;
+            color: #0befc5;
+        }
+        .ceshi{
+            border: 1px solid #000;
+        }
+        /* 垂直对齐方式：加给高度最大的 */
+        .ceshi img{
+            /* 居中效果 */
+            /* vertical-align: middle; */
+            /* 顶对齐 */
+            /* vertical-align: top; */
+            /* 底对齐：最高内容的底部 */
+            /* vertical-align: bottom; */
+            /* 消除留白另外方法 */
+            display: block;
+        }
+        .guodu{
+            position: relative;
+            margin-top: 100px;
+            /* font-weight: 400; */
+            width: 100px;
+            height: 100px;
+            /* background-image: url(./图片/小米/小/封面.png); */
+        }
+        /* 悬停效果并集写法 */
+        /* 落实到img和p上 */
+        .guodu:hover img,
+        .guodu:hover p{
+            font-weight: 700;
+            width: 200px;
+            height: 200px;
+            left: 50%;
+            top: 50%;
+        }
+        .guodu img{
+            /* margin-top: 100px; */
+            width: 100px;
+            height: 100px;
+            /* 过渡属性 */
+            transition: all 10s;
+        }
+        .guodu p{
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 10s;
+        }
+        /* 透明度 */
+        .tmd{
+            margin-top: 400px;
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            opacity: 1;
+        }
+        /* 光标类型 */
+        .guangbiao{
+            margin-top: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: #10b5e7;
+            /* 小手 */
+            /* cursor: pointer; */
+            /* 工字形 */
+            /* cursor: text; */
+            /* 十字形 */
+            cursor: move;
+        }
+     </style>
+</head>
+<body>
+    <p>的水听歌呢绕的是否还能贵司的那个hi让人你是个还能日啊建国后i人会发生的女孩归刃谭哦怕</p>
+    <div class="fengmian">
+        <img src="./图片/小米/小/封面.png" alt="">
+    </div>
+    <div>
+        <img src="./图片/mdao.jpeg" alt="">
+    </div>
+    <p>本地数据库弗兰克热点给VS的基本贵人是内陆受到法国南部及二十个和你接客僧i然
+    后他发表过会杀人的快感和你的是个牛人色哦还能公然饿哦i给你尽快发阿萨的女鬼很不对劲啊很
+    难过建设绿地现场二十年各界人士u天天</p>
+    <div class="news">
+        <div class="top">
+            <img src="./图片/mdao.jpeg" alt="">
+        </div>
+        <span>魔道祖师</span>
+        <p>肺结核日天后宫</p>
+    </div>
+    <div class="pic">
+        <img src="./图片/mdao1.jpg" alt="">
+    </div>
+    <div class="duidie">
+        <div class="box1">fcrdyg</div>
+        <div class="box2">hsfjhtg</div>
+    </div>
+    <div class="jingling"></div>
+    <div class="servers">
+        <ul>
+            <li>
+                <h4></h4>
+                <p>fcnsdkj</p>
+            </li>
+            <li>
+                <h4></h4>
+                <p>fcnsdkj</p>
+            </li>
+            <li>
+                <h4></h4>
+                <p>fcnsdkj</p>
+            </li>
+            <li>
+                <h4></h4>
+                <p>fcnsdkj</p>
+            </li>
+        </ul>
+    </div>
+    <!-- 字体图标 -->
+    <span class="iconfont icon-aixin"></span>
+    <!-- 浏览器默认将行内块和行内显示模式当成字体来显示，可以转成块显示模式 -->
+    <div class="ceshi">
+        <img src="./图片/mdao1.jpg" alt="">
+        负电荷的突然翻滚</div>
+    <div class="guodu">
+        <img src="./图片/mdao1.jpg" alt="">
+        <p>魔道祖师</p>
+    </div>
+    <div class="tmd">
+        <img src="./图片/mdao1.jpg" alt="">
+    </div>
+    <div class="guangbiao"></div>
+</body>
+</html>

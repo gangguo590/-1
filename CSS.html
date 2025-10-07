@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <!-- link为引入css -->
+    <!-- <link rel="stylesheet" href="./1.css"> -->
+    <style>
+        /* <!-- CSS代码写法：选择器 { CSS属性 } ,{}内可放多个属性值 --> */
+        /* <!-- p为选择器， --> */
+        p {
+            /* <!-- color为颜色 --> */
+            /* <!-- font-size为字体大小 --> */
+            /* <!-- 属性名与属性值成对出现，成为键值对 --> */
+            color: rgb(114, 222, 26);
+            /* font-size: 20px; */
+            /* 行高（上一行文字上顶到下一行文字的上顶）：设置多行文本的间距。数字+px为实际大小，只有数字为font-size的属性值的倍数 */
+            line-height: 2;
+            /* font-family为字体类型，多个字体类型之间用逗号隔开，电脑从左往右依次查找字体 */
+            /* font-family: 楷体; */
+            /* font复合属性写法：一个属性，多个值，值之间用空格隔开。顺序为：是否倾斜，是否加粗，字号/行高，字体。 字号和字体值必须写*/
+            font: italic 700 20px/2 草书;
+            /* 文本缩进：text-indent。属性值有两种：数字+px；数字+em（1em=当前字号大小 ） */
+            text-indent: 2em;
+            /* 文字对齐方式：控制内容水平对齐方式--text-align */
+            /* text-align: left; */
+            text-align: center;
+            /* text-align: right; */
+        }
+        .p1{
+            /* color: rgba(249, 5, 5, 0.5); */
+            color: #DCBCFE;
+            /* background-color: rgb(244, 223, 39); */
+        }
+        /* 定义类选择器,red为类名 */
+        .red {
+            color: red;
+            font-size: 20px;
+        }
+        .size{
+            font-size: 50px;
+            /* px为像素 */
+        }
+        /* 定义id选择器 */
+        #green{
+            color: green;
+        }
+        /* 定义通配符 */
+        /* *{ */
+            /* color: aquamarine; */
+        /* } */
+        strong{
+            /* font-size为字体大小，要有单位 */
+            font-size: 30px;
+            /* font-weight为字体粗细，可加粗700/去粗400 */
+            font-weight: 400;
+        }
+        em{
+            /* font-style为清除文字默认的倾斜效果，正常不倾斜 */
+            font-style: normal;
+            /* font-style: italic; */
+        }
+        /* 图片居中，img要加一个父级 */
+        /* div{ */
+            /* text-align: center; */
+            /* text-indent: 30px; */
+        /* } */
+        .a1{
+            /* 文本修饰线。none为去掉下划线；underline为加下划线；line-through为加删除线；overline为添加上划线。 */
+            text-decoration: none;
+            /* text-decoration: underline; */
+            /* text-decoration: line-through; */
+            /* text-decoration: overline; */
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- 标签选择器 -->
+    <p class="p1">魔道祖师</p>
+    <p>gangguo</p>
+    <!-- 行内写法,style="css属性" -->
+     <p style="color: blueviolet;font-size: 40px;">buabgna</p>
+    <div style="color: bisque; font-size: 30px;">引入方式</div>
+    <!-- 类标签器步骤：1、定义类选择器2、使用类选择器，添加class,类选择器可以用到多个标签内-->
+     <P class="red">红色</P>
+     <!-- class中可以放多个类选择器，中间用空格隔开 -->
+     <p class="red size">gangguo</p>
+     <!-- id选择器步骤：1、定义id选择器2、使用id选择器。同一个id选择器在一个页面只能只用一次,id内加属性值 -->
+      <div id="green">chfhfwebgn</div>
+      <!-- 通配符选择器：*，不需要调用 -->
+       <p>erhguhe</p><br>
+       <strong>夫阿尔贝格这大概热火</strong><br>
+       <em>csdgbdzjk</em>
+       <p>续费brag安徽瑞华噶人哪个好这块地如啊韩国i哦按然后开始发卡哈人体就偶蹄目让客户栏目干扰而规划图入行这个和日式霓虹</p><br>
+       <!-- 行高-垂直居中：行高属性值与盒子高度属性值相等 -->
+        <!-- .one{ -->
+            <!-- /* width: 100px; */ -->
+            <!-- height: 100px; -->
+            <!-- /* 背景色 */ -->
+            <!-- background-color: aqua; -->
+            <!-- line-height: 100px; -->
+        <!-- } -->
+        <!-- div为图片居中的父级 -->
+        <div style="text-indent: 30px;">
+            <img src="./图片/小米/小/封面.png">
+        </div>
+        <div style="text-align: center;"><img src="./图片/小米/小/封面.png" alt=""></div>
+        <!-- <img src="./图片/小米/小/封面.png" alt=""> -->
+         <a class="a1" href="#">scbsdanjkdfiugb</a><br>
+         <!-- <a style="text-decoration: none;" href="#">scbsdanjkdfiugb</a> -->
+</body>
+</html>

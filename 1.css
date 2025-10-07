@@ -1,0 +1,13 @@
+p {
+    /* p为选择器，与html中要美化的部分一致 */
+    /* color: aquamarine; */
+    text-indent: 2em;
+    font-size: 18px;
+    color: #333;
+}
+/* div { */
+    /* font-size: larger; */
+/* } */
+.a1:link{
+color: bisque;
+}

@@ -1,0 +1,239 @@
+/* 公共部分 */
+/* 版心 */
+.wrapper{
+    width: 1240px;
+    margin: 0 auto;
+}
+/* 快捷导航 */
+.shortcut{
+    height: 52px;
+    background-color: #333;
+}
+.shortcut .wrapper{
+    height: 52px;
+    /* background-color: #fff; */
+    display: flex;
+    /* 右对齐 */
+    justify-content: flex-end;
+    align-items: center;
+}
+.shortcut .wrapper ul{
+    display: flex;
+}
+/* .shortcut .wrapper ul li{
+    padding: 0 15px;
+    border-right: 1px solid #999;
+    font-size: 14px;
+} */
+.shortcut .wrapper ul li a{
+    color: #fff;
+    padding: 0 15px;
+    border-right: 1px solid #999;
+    font-size: 14px;
+}
+.shortcut .wrapper ul li:last-child a{
+    border-right: none;
+}
+.shortcut .wrapper .iconfont{
+    margin-right: 4px;
+    /* vertical-align: middle; */
+}
+.shortcut .wrapper ul li .active{
+    color: #5eb69c;
+}
+/* 头部区域 */
+.header{
+    margin: 22px 0;
+    height: 88px;
+    /* background-color: #0bd2c8; */
+}
+.header .wrapper{
+    display: flex;
+}
+.header .wrapper .logo{
+    margin-right: 41px;
+    width: 200px;
+    height: 88px;
+    /* background-color: #e30404; */
+}
+.header .wrapper .logo a{
+    background-image: url(../图片/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width: 200px;
+    height: 88px;
+    display: block;
+    font-size: 0;
+}
+.header .wrapper .nav{
+    margin-top: 33px;
+    margin-right: 28px;
+}
+.header .wrapper .nav ul{
+    display: flex;
+
+}
+.header .wrapper .nav ul li{
+    margin-right: 47px;
+}
+/* 底下距离 */
+.header .wrapper .nav ul a{
+    padding-bottom: 10px;
+}
+.header .wrapper .nav ul a:hover{
+    /* padding-bottom: 10px; */
+    color: #5eb69c;
+    border-bottom: 2px solid #5eb69c;
+}
+.header .wrapper .search{
+    display: flex;
+    margin-top: 33px;
+    margin-right: 45px;
+    width: 170px;
+    height: 34px;
+    border-bottom: 2px solid #f4f4f4;
+}
+.header .wrapper .search a .iconfont{
+    font-size: 20px;
+    color: #ccc;
+    margin-right: 8px;
+}
+.header .wrapper .search input{
+    /* flex=1不生效，浏览器优先生效input的默认宽高度 */
+    /* 加width=0，即重置宽度 */
+    width: 0;
+    flex: 1;
+    border: 0px solid #000;
+    outline: none;
+}
+/* input的placeholder处理方法：加： */
+.header .wrapper .search input::placeholder{
+    font-size: 16px;
+    color: #ccc;
+}
+.header .wrapper .cart{
+    margin-top: 32px;
+    position: relative;
+}
+.header .wrapper .cart a .iconfont{
+    font-size: 24px;
+}
+.header .wrapper .cart i{
+    position: absolute;
+    padding: 0 6px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 7.5px;
+    /* 购物车上数字一般不右对齐,左对齐时即使文字多时会向右侧伸长 */
+    left: 15px;
+    top: -8px;
+    font-size: 14px;
+    line-height: 15px;
+    color: #fffefe;
+}
+/* 尾部区域 */
+.footer{
+    height: 580px;
+    background-color: #f5f5f5;
+}
+.footer .service{
+    padding: 60px 0;
+    height: 178px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.footer .service ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer .service ul li{
+    display: flex;
+    width: 190px;
+    height: 58px;
+    /* background-color: #04e713; */
+}
+/* 精灵 */
+.footer .service ul li h5{
+    margin-right: 20px;
+    width: 58px;
+    height: 58px;
+    background-image: url(../图片/logo.png);
+    /* background-size: contain; */
+    background-position: -50px -30px;
+}
+.footer .service ul li p{
+    font-size: 28px;
+    /* line-height: 58px; */
+    align-self: center;
+}
+/* 换图 */
+.footer .service ul li:nth-child(2) h5{
+    background-image: url(../图片/logo.png);
+    background-position: -100px -60px;
+}
+.footer .help{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    height: 300px;
+    /* background-color: #07e5ec; */
+}
+.footer .help .left{
+    display: flex;
+}
+.footer .help .left dl{
+    margin-right: 84px;
+}
+.footer .help .left dt{
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.footer .help .left dd a{
+    margin-bottom: 10px;
+    color: #969696;
+}
+/* 实际经验：最后一个右间距去掉 */
+.footer .help .left dl:last-child{
+    margin-right: 0;
+}
+.footer .help .left a{
+    display: block;
+}
+.footer .help .left .iconfont{
+    color: #5eb69c;
+}
+.footer .help .right ul{
+    display: flex;
+}
+/* .footer .help .right li{
+    margin-right: 55px;
+}
+.footer .help .right li:last-child{
+    margin-right: 0;
+} */
+/* 第一个加 */
+.footer .help .right li:first-child{
+    margin-right: 55px;
+}
+.footer .help .right .pic img{
+    width: 100px;
+    height: 100px;
+}
+.footer .help .right .pic{
+    margin-bottom: 10px;
+}
+.footer .help .right p{
+    font-size: 16px;
+    color: #969696;
+    text-align: center;
+}
+.banquan p{
+    text-align: center;
+    color: #a1a1a1;
+    margin-bottom: 10px;
+}
+.banquan a{
+    color: #a1a1a1;
+    /* padding: 0px 10px; */
+    margin: 0 10px;
+}

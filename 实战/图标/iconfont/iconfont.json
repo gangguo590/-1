@@ -1,0 +1,16 @@
+{
+  "id": "4979097",
+  "name": "测试",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12070243",
+      "name": "合同小手机icon",
+      "font_class": "hetongxiaoshoujiicon",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    }
+  ]
+}

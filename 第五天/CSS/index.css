@@ -1,0 +1,424 @@
+/* 由于版心都是居中，故在此处提前设置版心效果 */
+/* 设置 */
+.wrapper{
+    margin: 0 auto;
+    width: 1200px;
+}
+body{
+    background-color: #f3f5f7;
+}
+/* 头部CSS */
+.header{
+    /* padding-top: 29px; */
+    height: 100px;
+    background-color: #fff;
+}
+/* 后代选择器选择wrapper,不直接在wrapper中改 */
+.header .wrapper{
+    display: flex;
+    padding-top: 29px;
+}
+/* a为行内显示模式 */
+.header .wrapper .logo a{
+    width: 195px;
+    height: 46px;
+    /* logo设置为背景图片 */
+    background-image: url(../图片/logo.jpg);
+    display: block;
+    font-size: 0;
+}
+.header .wrapper .daohang ul{
+    /* flex只能隔一级 */
+    display: flex;
+    margin-left: 102px;
+    /* align-items: center; */
+}
+.daohang{
+    display: flex;
+    align-items: center;
+}
+.daohang li{
+    margin-right: 24px
+}
+.daohang li a{
+    /* display: block; */
+    padding: 6px 8px;
+    /* line-height: 27px; */
+    font-size: 19px;
+}
+/* 设计蓝色边框线 */
+/* 默认为选择首页 */
+.daohang li .active,
+/* 悬停时效果 */
+.daohang li a:hover{
+    border-bottom: 2px solid #00a4ff;;
+}
+/* 设计搜索区域 */
+.header .search{
+    display: flex;
+    width: 412px;
+    height: 40px;
+    background-color: #f3f5f7;border-radius: 20px;
+    margin-left: 64px;
+    padding: 0 12px 0 19px;
+}
+.search input{
+    background-color: #f3f5f7;
+    border: 0;
+    /* 扩大搜索区域 */
+    /* 剩下的一份全占了 */
+    flex: 1;
+    /* 去掉表单控件的焦点框 */
+    outline: none;
+}
+/* 父级search为flex布局，盒子变成弹性盒子,弹性盒子加宽高生效 */
+.search a{
+    /* searcher为flex布局了 */
+    align-self: center;
+    width: 16px;
+    height: 16px;
+    /* 背景图 */
+    background-image: url(../图片/搜索.webp);
+}
+/* 控制placeholder的属性 */
+.search input::placeholder{
+    font-size: 14px;
+    color: #999;
+}
+/* 头像 */
+.header .user a img{
+    /* align-self: center; */
+    /* vertical-align用来处理行内块和行内垂直方向对齐方式 */
+    vertical-align: middle;
+    margin-right: 7px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    /* margin-left: 32px; */
+    /* margin-top: 4px; */
+}
+.user{
+    margin-top: 4px;
+    margin-left: 32px;
+}
+/* .header .user a{
+    display: flex;
+} */
+.header .user a span{
+    /* align-self: center; */
+    font-size: 16px;
+    color: #666;
+}
+/* 主体内容 */
+.banner{
+    background-color: #0092cb;
+    height: 420px;
+}
+.banner .wrapper{
+    display: flex;
+    justify-content: space-between;
+    height: 420px;
+    background-image: url(../../图片/mdao1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* 侧导航设置 */
+.banner .left{
+    padding: 3px 20px;
+    width: 191px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.banner .left a{
+    display: block;
+    background-image: url(../图片/箭头12.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    color: #fff;
+    height: 46px;
+    line-height: 46px;
+}
+/* 悬停时变化 */
+.banner .left a:hover{
+    color: #00a4ff;
+    /* background-image: url(../图片/箭头.png); */
+}
+.banner .right{
+    /* display: flex; */
+    margin-top: 60px;
+    border-radius: 10px;
+    width: 218px;
+    height: 305px;
+    background-color: #209dd5;
+}
+.banner .right h3{
+    margin-left: 14px;
+    height: 48px;
+    line-height: 48px;
+    /* 行高与高度相等时垂直居中 */
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+.banner .right .zhuti{
+    background-color: #fff;
+    height: 257px;
+    border-radius: 10px;
+    padding: 14px;
+}
+.banner .right dl{
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+.banner .right dt{
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+}
+.banner .right dd{
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.banner .right dd span{
+    color: #00a4ff;
+}
+.banner .right dd strong{
+    font-weight: 400;
+    color: #7d7d7d;
+}
+.banner .right .biaoge{
+    /* 居中法1 */
+    /* display: flex; */
+    height: 32px;
+    background-color: #00a4ff;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.banner .right .biaoge a{
+    /* margin: auto; */
+    display: block;
+    /* text要在块内显示中才能显示出 */
+    /*居中法2  */
+    text-align: center;
+    line-height: 32px;
+}
+/* 精品推荐 */
+.recommend .wrapper{
+    display: flex;
+    height: 60px;
+    background-color: #fff;
+    /* 盒子阴影设置 */
+    box-shadow: 0px 1px 2px 0px rgba(211, 211, 211, 0.5);
+    margin-top: 11px;
+    padding: 0 20px;
+    /* 居中法1 */
+    line-height: 60px;
+}
+.recommend .wrapper h3{
+    /* 居中法2 */
+    /* align-self: center; */
+    font-weight: 400;
+    font-size: 18px;
+    color: #00a4ff;
+}
+.recommend .wrapper ul{
+    /* 将中间的部分分成1部分 */
+    flex: 1;
+    display: flex;
+}
+.recommend .wrapper ul li a{
+    font-size: 18px;
+    align-self: center;
+    padding: 0 24px;
+    /* 加在a中，为为行内显示，高度与内容一样 */
+    border-right: 1px solid #e0e0e0;
+}
+.recommend .wrapper ul li a:hover{
+    color: #00a4ff;
+}
+/* a必须写在前面 */
+.recommend .wrapper ul li a:last-child{
+    border-right: 0;
+}
+.recommend .wrapper .modify{
+    font-size: 16px;
+    color: #00a4ff;
+}
+.course .wrapper{
+    margin-top: 15px;
+}
+/* 精品课程区域,作为公共类 */
+.hd{
+    display: flex;
+    justify-content: space-between;
+    /* vertical-align: middle; */
+    height: 60px;
+    line-height: 60px;
+}
+.hd .more{
+    background-image: url(../图片/箭头12.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+    font-size: 14p0x;
+    color: #999;
+    /* vertical-align: middle; */
+}
+.hd h3{
+    font-size: 21px;
+    font-weight: 400;
+}
+.bd ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-content: space-between; */
+}
+.bd ul li{
+    margin-bottom: 14px;
+    width: 228px;
+    height: 271px;
+    background-color: #ca1515;
+}
+.bd ul li a .pic{
+    height: 156px;
+    overflow: hidden;
+}
+.bd ul li a .text{
+    padding: 20px;
+    height: 115px;
+    background-color: #fff;
+}
+.bd ul li a .text h4{
+    margin-bottom: 13px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* 固定高度，使下面的字不动 */
+    height: 40px;
+}
+.bd ul li a .text p{
+    /* margin-bottom: 13px; */
+    /* font-weight: 400; */
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+    /* height: 40px; */
+}
+.bd ul li a .text p span{
+    color: #fa6400;
+}
+.bd ul li a .text p i{
+    /* 不倾斜 */
+    font-style: normal;
+}
+/* 以上可作为公共类CSS使用 */
+
+/* 前端区域 */
+.qianduan .hd ul{
+    display: flex;
+}
+.qianduan .hd ul li{
+    margin-right: 60px;
+}
+.qianduan .active,
+.qianduan .hd ul li a:hover{
+    color: #00a4ff;
+}
+.qianduan .bd{
+    display: flex;
+    justify-content: space-between;
+}
+.qianduan .bd .right{
+    height: 390px;
+    width: 957px;
+    background-color: #fff;
+}
+.qianduan .bd .left{
+    height: 390px;
+    width: 228px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.qianduan .bd .left img{
+    height: 396px;
+    width: 228px;
+}
+.qianduan .bd .right .top img{
+    height: 100px;
+    width: 957px;
+}
+.bd .right .top{
+    margin-bottom: 15px;
+    height: 100px;
+}
+/* 人工智能区域 */
+.rgzn .hd ul{
+    display: flex;
+}
+.rgzn .hd  ul li{
+    margin-right: 60px;
+}
+/* .rgzn .hd  ul li a:nth-child(2){
+    color: #00a4ff;
+} */
+.rgzn .hd  ul li .active,
+.rgzn .hd  ul li a:hover{
+    color: #00a4ff;
+}
+/* 版权区域 */
+.banquan{
+    background-color: #fff;
+}
+.banquan .wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    height: 273px;
+    margin-top: 60px;
+    background-color: #fff;
+}
+.banquan .wrapper .left{
+    width: 440px;
+    /* background-color: #991111; */
+}
+.banquan .wrapper .left p{
+    margin-top: 24px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    line-height: 17px;
+    color: #666;
+}
+.banquan .wrapper .left .dowmload{
+    /* a为行内显示 */
+    display: block;
+    /* color: #; */
+    line-height: 36px;
+    text-align: center;
+    border-radius: 20px;
+    width: 120px;
+    height: 36px;
+    border: 1px solid #00a4ff;
+    font-size: 16px;
+    color: #00a4ff;
+}
+.banquan .right dl a{
+    display: block;
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+}
+.banquan .right{
+    display: flex;
+}
+.banquan .right dl{
+    margin-left: 130px;
+}
+.banquan .right dl dt{
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 16px;
+}

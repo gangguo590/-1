@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景属性</title>
+</head>
+<style>
+    /* 背景图简写：bgi */
+    /* div{ */
+        /* width: 600px; */
+        /* height: 600px; */
+        /* background-color: #c40c0c; */
+        /* 背景图：默认平铺效果 */
+        /* background-image: url(./图片/mdao1.jpg); */
+        /* 背景平铺方式（bgr）：no-repeat为不平铺；repeat为平铺效果；repeat-x为横向平铺；repeat-y为纵向平铺 */
+        /* background-repeat: no-repeat; */
+        /* background-repeat: repeat; */
+        /* background-repeat: repeat-x; */
+        /* background-repeat: repeat-y; */
+        /* 背景图片位置调整,默认为左上角。数字和字母可结合使用 */
+        /* background-position: 0 0; */
+        /* background-position:right bottom; */
+        /* background-position: 50px 100px; */
+        /* background-position:center; */
+        /* background-position: 50px center; */
+        /* 特殊写法 */
+        /* 关键字先垂直后水平 */
+        /* background-position: bottom right; */
+        /* 只写一个关键字，另一个默认为居中;只写一个数字，为水平效果，垂直方向默认为居中。 */
+        /* background-position: top; */
+        /* background-position: 50px; */
+        /* 背景图缩放：bgz */
+        /* contain：等比列缩放，宽和高有一边与背景图相等就停止缩放，可能导致盒子填充不全。 */
+        /* background-size: contain; */
+        /* cover：图片完全填充盒子，可能导致图片显示不全。 */
+        /* background-size: cover; */
+        /* 百分比缩放：100%表示图片的宽度和盒子宽度一样，图片的高度按照图片比例等比缩放。 */
+        /* background-size: 100%; */
+        /* 背景图固定：bga */
+        /* background-attachment: fixed; */
+        /* 背景复合属性：背景色 背景图 平铺方式 位置/缩放 */
+        /* background: #07f7db url(./图片/mdao1.jpg) no-repeat center/cover; */
+    /* } */
+    /* 块级元素：加宽高生效 */
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: #ee0505;
+        /* display为转换显示模式，inline-block为行内块模式 */
+        /* display: inline-block; */
+        /* display为转换显示模式，inline为行内模式 */
+        display: inline;
+    }
+    /* 行内元素：加宽高不生效 */
+    span{
+        width: 200px;
+        height: 200px;
+        /* display为转换显示模式，block为块级模式 */
+        /* display: block; */
+        /* display为转换显示模式，inline-block为行内块模式 */
+        display: inline-block;
+    }
+    /* 行内块元素：加宽高生效 */
+    img{
+        width: 400px;
+        height: 400px;
+        /* display为转换显示模式，block为块级模式 */
+        display: block;
+    }
+</style>
+<body>
+    <!-- 背景图,默认为平铺的效果。 -->
+    <!-- <div><img src="./图片/mdao1.jpg" alt=""></div> -->
+     <div>cidabirengjia</div>
+     <div>cdguiaeuinri</div>
+     <span>cdbusgsui</span>
+     <span>cuegbusie</span>
+     <img src="./su7.jpg" alt="">
+     <img src="./su7_1.jpg" alt="">
+     <!-- <p>bergiursnihntrisiz</p>
+     <p>bergiursnihntrisiz</p>
+     <p>bergiursnihntrisiz</p> -->
+</body>
+</html>

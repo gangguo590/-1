@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS第三天</title>
+    <style>
+        /* 选择哪个 */
+        /* 结构伪类选择器 */
+        li:first-child{
+            background-color: #d81818;
+            font-size: 30px;
+        }
+        /* （）内为数字 */
+        li:nth-child(5){
+            text-indent: 20px;
+        }
+        /* （）内为公式,n默认是从0开始，n有正有负*/
+        li:nth-child(2n){
+            color: aquamarine;
+        }
+        /* 伪元素选择器 */
+        .div1::before{
+            content: "魔道";
+            width: 100px;
+            height: 100px;
+            /* display: block; */
+        }
+        .div1::after{
+            /* 加图片用url() */
+            content: url('./图片/mdao1.jpg');
+        }
+        .div2{
+            width: 200px;
+            height: 200px;
+            background-color: #0aee8c;
+            /* 内边距：padding。四个方向都有内边距 */
+            /* padding: 20px; */
+            /* 某一边内边距设置：padding-方位 */
+            /* padding-left: 10px; */
+            /* padding-top: 20px; */
+            /* padding四值写法：顺序为上、右、下、左 */
+            /* padding: 10px 20px 30px 40px; */
+            /* padding三值写法顺序：上、左右、下 */
+            /* padding: 10px 20px 30px; */
+            /* padding两值写法顺序： 上下、左右*/
+            padding: 10px;
+            /* 内减模式 */
+            box-sizing: border-box;
+            /* 边框线：默认为1px */
+            /* border: 1px solid #eb0c0c; */
+            /* 边框线属性 */
+            /* 线条样式：虚线 */
+            /* border: 2px dashed #a50dfc; */
+            /* 线条样式：点线 */
+            /* border: 2px dotted #0de0e7; */
+            /* 某一边边框线设置：boder-方位 */
+            border-top: 1px solid #c21919;
+            border-left: 2px dashed #000;
+            border-bottom: 3px solid #0ecaef;
+            border-right: 5px dotted #4a09ef;
+            /* 外边距：margin。写法与padding一样 */
+            /* margin: 10px; */
+            /* margin-top: 10px; */
+            /* margin: 50px 100px; */
+            /* 版心居中效果：margin:auto。但是，必须要有盒子宽度属性。 */
+            margin: 0 auto;
+            /* 元素溢出 */
+            /* 隐藏 */
+            overflow: hidden;
+            /* 一直有滚动条 */
+            /* overflow: scroll; */
+            /* 溢出才有滚动条 */
+            /* overflow: auto; */
+            /* 圆角效果 */
+            /* border-radius: 20px; */
+            /* 多值写法：从左上角开始顺时针赋值，没有写值的角与对角取值相同 */
+            /* 四值写法 */
+            /* border-radius: 10px 20px 30px 40px; */
+            /* 三值写法：对角相同 */
+            /* border-radius: 100px 20px 100px; */
+            /* 二值写法 */
+            border-radius: 100px 200px;
+        }
+        /* 清除默认样式 */
+        *{
+            margin: 0;
+            padding: 0;
+            /* 此时，li的小圆点还存在，只是到了左边看不见了 */
+            /* 为了方便，在清除默认样式后加入内减模式 */
+            box-sizing: border-box;
+        }
+        /* 清除li标签的小圆点 */
+        li{
+            list-style: none;
+        }
+        .one{
+            width: 200px;
+            height: 200px;
+            background-color: #f80707;
+            /* 上面盒子的下外边距 */
+            margin-bottom: 10px;
+            /* 塌陷问题第一个解决办法 */
+            padding-top: 20px;
+            /* 塌陷问题第二个解决办法 */
+            /* overflow: hidden; */
+            /* 塌陷问题第三个解决办法 */
+            /* border-top: 1px solid #000; */
+        }
+        .two{
+            width: 100px;
+            height: 100px;
+            background-color: #12dafd;
+            /* 下面盒子的上外边距 */
+            margin-top: 20px;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: #b4ee06;
+            /* margin-top: 20px; */
+        }
+        span{
+            /* background-color: #be2c2c; */
+            margin: 10px;
+            padding: 20px;
+            line-height: 200px;
+            /* 行内元素改变不了垂直边距，水平方向可以改变 */
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            /* overflow: hidden; */
+            /* 正方形变正圆 */
+            /* border-radius: 100px; */
+            border-radius: 50%;
+            /* 百分比的话，最大为50%，超过50%时无效果 */
+        }
+        .div3{
+            width: 200px;
+            height: 100px;
+            background-color: #0db8f6;
+            /* 长方形变胶囊 */
+            /* border-radius: 50px; */
+            margin: auto;
+            box-shadow: 20px 10px 10px 5px rgba(2, 20, 100, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>vgusfidhf</li>
+        <li>cbavaejkbnof</li>
+        <li>abeujbjab</li>
+        <li>cbahvbjiv</li>
+        <li>cveahjbir</li>
+    </ul>
+    <div class="div1">祖师</div>
+    <div class="div2">魔道祖师带啊u俄国吧v大家那vui都给i让交房呢让v粗回顾和他人但是蹙额爱韩庚i热教导下不是说v宝贵热机耦合九四v第四过热
+        成都四个电话你生日个副本时任港督hi如同好几个是日本飞鸟经过思考更多功能Trish多久哦i虎耳的那个 的干部i让他索尼发布
+    </div>
+    <p>cbgbsirenijn</p>
+    <h2>sdvdfbsgnsr</h2>
+    <div class="one">csabgjeni</div>
+    <div class="two">xsbagerajnj</div>
+    <!-- 外边距取较大值 -->
+     <div class="one">
+        <div class="son">cuiagn</div>
+        <!-- <div class="son">cuiagn</div> -->
+        <!-- <div class="son">cuiagn</div> -->
+     </div>
+    <span>svubfifsnsdhsvgc</span>
+    <span>guydghithsugyvf</span>
+    <div class="div2"></div>
+    <img src="./图片/mdao1.jpg" alt="">
+    <!-- <div class="div3"></div> -->
+    <div class="div3"></div>
+</body>
+</html>

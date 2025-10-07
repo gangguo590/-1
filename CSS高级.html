@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS高级</title>
+    <!-- <link rel="stylesheet" href="./1.css"> -->
+    <style>
+        /* 后代选择器 */
+        /* 父级选择器+空格+子选择器 */
+        /* div span{ */
+            /* color: rgb(225, 24, 34); */
+            /* line-height: 30px; */
+        /* } */
+        /* 子代选择器 */
+        /* div > span{ */
+            /* color: #567e; */
+        /* } */
+        /* 并集选择器,选择父级，则其中的子级全部选中 */
+        div,
+        /* span, */
+        strong{
+            color: #abcdef;
+        }
+        /* 交集选择器,p为标签 */
+        p.box{
+            color: rgb(15, 205, 253);
+            font-family: 黑体;
+        }
+        span.box{
+            color: aqua;
+        }
+        /* 伪类选择器 */
+        /* 1、鼠标悬停状态,图片显示不出 */
+        .p1:hover{
+            color: aqua;
+        }
+        .div1:hover{
+            color: rgb(219, 9, 44);
+        }
+        /* 伪类超链接--学习时 */
+        /* a:link{
+            color: rgb(8, 240, 59);
+        }
+        a:visited{
+            color: aqua;
+        }
+        a:hover{
+            color: rgb(255, 0, 8);
+        }
+        a:active{
+            color: rgb(238, 251, 2);
+        } */
+         /* 工作时写法 */
+        a{
+            color: aqua;
+         }
+        a:hover{
+            color: rgb(243, 143, 12);
+        }
+        /* CSS的继承性，子级继承父级文字控制属性，子级有自己的属性时以自己的为准，没有时以父级的为准 */
+        /* 父级为body */
+        /* body{
+            font-size: 20px;
+            color: antiquewhite;
+            font-family: 楷体;
+        } */
+        /* CSS层叠性 */
+        p{
+            color: aquamarine;
+            font-size: 30px;
+        }
+        p{
+            color: blueviolet;
+            font-family: 草书;
+        }
+        /* CSS优先级 */
+        /* 通配符选择器 */
+        *{
+            color: rgb(245, 202, 10);
+        }
+        /* 标签选择器 */
+        div{
+            color: aquamarine !important;
+        }
+        /* 类选择器 */
+        .div2{
+            color: bisque;
+        }
+        /* id选择器 */
+        #id1{
+            color: #b3ec07;
+        }
+        /* !improtant,加到想要提高优先级的分号前,慎用 */
+    </style>
+</head>
+<body>
+    <!-- 父级span -->
+    <span class="box">成都市代购i热</span>
+    <div>
+        <!-- 子级span -->
+        <span>从北航热狗尽快</span>
+        <p>
+            <!-- 孙级span -->
+            <span class="box">测定</span>
+        </p>
+    </div>
+    <strong>八卦i日你哦</strong>
+    <p class="box">cbiavnj</p>
+    <p>cheaiwu</p>
+    <div class="div1">cadgiaen</div>
+    <p class="p1">那次恶鬼色色</p>
+    <a href="#"><img src="./图片/小米/小/封面.png" alt=""></a>
+    <div class="div1"><img src="./图片/小米/小/封面.png" alt=""></div>
+    <a href="#">ceabgrjenk</a><br>
+    <a href="#">cbginzren</a>
+    <p>吃的告白u热祸害粗的年高体弱擦欸柜台他日你哦是南方城市的归热啊奴人那个主任阿瓜热爱</p>
+    <div class="div2" id="id1" style="color: red;">程度高i热奶i然后原本顾锐内阁绕路哎热瓜尔涅泥土ribs v自己v的方式</div>
+</body>
+</html>

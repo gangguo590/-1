@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS第四天案例</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        /* 整个大盒子 */
+        .div1{
+            /* 版心居中 */
+            margin: auto;
+            /* 倒圆角 */
+            border-radius: 10px;
+            width: 1200px;
+            height: 418px;
+            background-color: #ddd;
+        }
+        .div1 ul{
+            /* 父级加display */
+            display: flex;
+            /* 换行 */
+            flex-wrap: wrap;
+            /* 均分 */
+            justify-content: space-between;
+            /* 行显示方式 */
+            align-content: space-between;
+            /* 宽度承接父级 */
+            height: 418px;
+            padding:90px 40px 90px 60px
+        }
+        .div1 ul li{
+            display: flex;
+            /* justify-content: space-between; */
+            /* 图片居中 */
+            align-items: center;
+            width: 500px;
+            height: 88px;
+            /* 设置背景颜色方便观看 */
+            background-color: #09deb3;
+        }
+        /* li中的picture该div */
+        .div1 .picture{
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            margin: 15px;
+        }
+        .picture img{
+            /* margin: 44px; */
+            width: 50px;
+            height: 50px;
+        }
+        /* 一定要精确 */
+        /* li中的text该div中的h3 */
+        .div1 .text h3{
+            line-height: 40px;
+            color: #333;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 楷体;
+        }
+        .div1 .text a{
+            color: rgb(188, 227, 11);
+            font-size: 14px;
+            text-decoration: none;
+            font-family: 楷体;
+        }
+        .div1 .text a:hover{
+            color: #e30b0b;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <ul>
+            <li>
+                <div class="picture">
+                    <img src="./图片/mdao1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>魔道祖师</h3>
+                    <a href="#">墨香铜臭</a>
+                </div>
+            </li>
+            <li>
+                <div class="picture">
+                    <img src="./图片/mdao1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>魔道祖师</h3>
+                    <p>墨香铜臭</p>
+                </div>
+            </li>
+            <li>
+                <div class="picture">
+                    <img src="./图片/mdao1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>魔道祖师</h3>
+                    <p>墨香铜臭</p>
+                </div>
+            </li>
+            <li>
+                <div class="picture">
+                    <img src="./图片/mdao1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>魔道祖师</h3>
+                    <p>墨香铜臭</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

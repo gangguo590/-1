@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="./icf1/iconfont.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .banner{
+            /* 父级 */
+            position: relative;
+            margin: 100px auto;
+            border-radius: 20px;
+            width: 564px;
+            height: 315px;
+            background-color: #10e8ec;
+            overflow: hidden;
+        }
+        .banner ul li a img{
+            width: 564px;
+            height: 315px;
+            border-radius: 20px;
+            vertical-align: middle;
+        }
+        .banner ul{
+            display: flex;
+        }
+        /* 箭头 */
+        .banner .prev,
+        .banner .next{
+            /* 子级 */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            opacity: 0;
+        }
+        .banner .prev{
+            left: 0;
+            border-radius: 0 15px 15px 0;
+        }
+        .banner .next{
+            right: 0;
+            border-radius: 15px 0 0 15px;
+        }
+        /* 悬停效果并集写法 */
+        .banner:hover .prev,
+        .banner:hover .next{
+            opacity: 1;
+        }
+        .iconfont{
+            line-height: 30px;
+        }
+        /* 原点 */
+        .bottom{
+            border-radius: 10px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 13px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .bottom ol{
+            display: flex;
+            height: 13px;
+        }
+        .bottom ol li{
+            cursor: pointer;
+            align-self: center;
+            margin-right: 3px;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        .bottom ol li:last-child{
+            margin-right: 0;
+        }
+        /* 特殊的li */
+        .bottom ol .active{
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <!-- 轮播图结构：ul嵌套li -->
+        <!-- 后续加JS实现轮播效果 -->
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="./图片/mdao1.jpg" alt="">
+                </a>
+            </li>
+             <li>
+                <a href="#">
+                    <img src="./图片/小米/小/封面.png" alt="">
+                </a>
+            </li>
+             <li>
+                <a href="#">
+                    <img src="./su7.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+        <!-- 箭头 -->
+        <div class="prev">
+            <a href="#">
+                <span class="iconfont icon-fanhui"></span>
+            </a>
+        </div>
+        <div class="next">
+            <a href="#">
+                <span class="iconfont icon-gengduo"></span>
+            </a>
+        </div>
+        <!-- 原点 -->
+        <div class="bottom">
+            <ol>
+                <li></li>
+                <li class="active"></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

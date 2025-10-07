@@ -1,0 +1,443 @@
+/* 页面滑动 */
+html{
+    scroll-behavior: smooth;
+}
+
+/* 首页 */
+/* 主体区域 */
+/* 轮播图 */
+.banner{
+    height: 500px;
+    background-color: #f5f5f5;
+}
+.banner .wrapper{
+    position: relative;
+    height: 500px;
+    background-color: #08fafa;
+}
+.banner .wrapper .pic img{
+    vertical-align: middle;
+    width: 1240px;
+    height: 500px;
+}
+.banner .wrapper .pic{
+    /* 加flex后会压缩宽度 */
+    display: flex;
+    /* 只看一张 */
+    overflow: hidden;
+}
+.banner .wrapper .cedaohang{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+/* 侧导航 */
+.banner .cedaohang li{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px 0 30px;
+    height: 50px;
+    line-height: 50px;
+}
+.banner .cedaohang li:hover{
+    background-color: #00be9a;
+}
+.banner .cedaohang a{
+    color: #fff;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.banner .cedaohang a:first-child{
+    font-size: 16px;
+    margin-right: 14px;
+}
+.banner .cedaohang .iconfont{
+    color: #fff;
+    font-size: 14px;
+}
+/* 原点:先统一都有背景，在设置默认和按下状态 */
+/* 一大套一小 */
+.banner .yuandian{
+    position: absolute;
+    right: 16px;
+    bottom: 17px;
+}
+.banner .yuandian ol{
+    display: flex;
+}
+.banner .yuandian ol li{
+    /* position: relative; */
+    margin-left: 8px;
+    width: 22px;
+    height: 22px;
+    /* background-color: #f00d0d; */
+    border-radius: 50%;
+    cursor: pointer;
+}
+.banner .yuandian ol li i{
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%,50%); */
+    /* 居中 */
+    margin: 4px;
+    border-radius: 50%;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* 默认页面 */
+.banner .yuandian ol .active{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.banner .yuandian .active i{
+    background-color: #fff;
+}
+.banner .ce{
+    display: none;
+    text-align: center;
+    position: absolute;
+    right: 170px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 50px;
+    height: 200px;
+    background-color: #07daad;
+    opacity: 0.5;
+    border-radius: 10px;
+    z-index: 10;
+}
+.ce div{
+    line-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+.ys{
+    color: #eafa08;
+}
+.ce div:last-child{
+    border-bottom: 0px;
+}
+/* 其他原点背景效果 */
+/* 点击之后与默认效果一样：查指令 */
+/* 标题公共代码 */
+.top{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    height: 42px;
+    /* background-color: #08e387; */
+}
+.top .left{
+    display: flex;
+}
+.top .left h3{
+    align-self: center;
+    margin-right: 35px;
+    font-size: 30px;
+    font-weight: 400;
+}
+.top .left p{
+    /* 底部对齐 */
+    align-self: flex-end;
+    color: #a1a1a1;
+}
+.top .right{
+    display: flex;
+}
+.top .right ul{
+    margin-right: 58px;
+    margin-top: 10px;
+    display: flex;
+}
+.top .right ul li a{
+    line-height: 20px;
+    padding: 0 7px;
+    display: block;
+    /* background-color: #e90e0e; */
+    height: 20px;
+    margin-left: 6px;
+}
+.top .right .more{
+    align-self: center;
+    color:#a1a1a1
+}
+.top .right .more .iconfont{
+    margin-left: 10px;
+}
+/* 内容公共代码 */
+.bottom ul{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom ul li{
+    width: 304px;
+    height: 404px;
+    background-color: #eef9f4;
+    overflow: hidden;
+}
+.bottom ul li img{
+    width: 304px;
+    height: 304PX;
+}
+.bottom ul li .text{
+    text-align: center;
+}
+.bottom ul li .text h3{
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 400;
+}
+/* 新鲜好物独有代码 */
+.goods .bottom ul li .text p{
+    font-size: 22px;
+    color: #aa2113;
+}
+.goods .bottom ul li .text .iconfont{
+    font-size: 18px;
+    margin-right: 3px;
+}
+/* 人气推荐独有代码 */
+.goods .bottom ul li{
+    background-color: #fff;
+}
+.goods .bottom ul li .text p{
+    color: #a1a1a1;
+}
+/* 品牌 */
+.goods{
+    margin-top: 60px;
+    height: 468px;
+    background-color: #f5f5f5;
+}
+.goods .wrapper{
+    /* 解决塌陷问题 */
+    overflow: hidden;
+    height: 468px;
+    /* background-color: #04bada; */
+}
+.goods .top{
+    position: relative;
+    margin-bottom: 40px;
+}
+.goods .bianju{
+    position: absolute;
+    display: flex;
+    right: 0;
+    bottom: -25px;
+}
+.goods .bianju a{
+    /* display: block; */
+    /* 字体图标调节位置:text-align: ;line-height: ;*/
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+}
+.goods .bianju .a1{
+    background-color: #ddd;
+}
+.goods .bianju .a2{
+    background-color: #00be9a;
+    margin-left: 12px;
+}
+.goods .bottom ul li{
+    width: 224px;
+    height: 306px;
+}
+.goods .bottom ul li img{
+    width: 244px;
+    height: 306px;
+}
+.goods .top{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+/* 默认选中效果 */
+.goods .active{
+    color: #fff;
+    background-color: #00be9a;
+}
+/* 公共代码 */
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.content .left{
+    overflow: hidden;
+    width: 248px;
+    height: 610px;
+    background-color: #d6e813;
+}
+.content .right{
+    width: 968px;
+    height: 610px;
+    /* background-color: #d702d0; */
+}
+.content .right li{
+    position: relative;
+    /* 三值写法 */
+    padding: 10px 21px 0;
+    width: 242px;
+    height: 305px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    /* transition: all 1s; */
+}
+.content .right ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content .right li .a3{
+    display: block;
+    width: 200px;
+    height: 180px;
+}
+.content .right li a img{
+    width: 200px;
+    height: 180px;
+}
+.content .right .text .bt{
+    /* bt设置高度，这样可以不影响下面价格 */
+    height: 60px;
+    margin-top: 14px;
+    margin-bottom: 5px;
+    line-height: 19px;
+}
+.content .right .bt h4{
+    font-weight: 400;
+}
+.content .right .text .p1{
+    color: #af2f22;
+}
+.content .right .p1 i{
+    font-size: 22px;
+    margin-left: 5px;
+}
+/* 悬停效果 */
+.content .right li .cover{
+    padding-top: 15px;
+    position: absolute;
+    left: 0;
+    bottom: -86px;
+    margin-top: 17px;
+    width: 242px;
+    height: 84px;
+    background-color: #00be9a;
+    text-align: center;
+    color: #fff;
+    /* 过渡效果 */
+    transition: all 1s;
+}
+/* 最终要落到cover身上 */
+.content .right li:hover .cover{
+    left: 0;
+    bottom: -5px;
+}
+.content .right li:hover{
+    border: 2px solid #00be9a;
+}
+.content .right li .cover p:first-child{
+    font-size: 18px;
+}
+.content .right li .cover p:nth-child(2){
+    margin: 3px auto 6px;
+    width: 120px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.11);
+}
+.content .right li .cover p:nth-child(3){
+    font-size: 13px;
+}
+.content .right li .cover .iconfont{
+    font-size: 13px;
+}
+/* 专题区域 */
+.zhuanti .top{
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.zhuanti .ztbd ul{
+    display: flex;
+    justify-content: space-between;
+}
+.zhuanti .ztbd li{
+    width: 405px;
+    height: 355px;
+    background-color: #098dd9;
+    /* overflow: hidden; */
+}
+.zhuanti .ztbd li .pic{
+    position: relative;
+    height: 288px;
+    width: 405px;
+}
+.zhuanti .ztbd li img{
+    height: 288px;
+    width: 405px;
+}
+.zhuanti .ztbd li .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    width: 405px;
+    height: 67px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #666;
+}
+.zhuanti .ztbd li .text .left{
+    display: flex;
+}
+.zhuanti .ztbd li .text .left p{
+    align-items: center;
+    margin-right: 20px;
+}
+/* 精确到i */
+.zhuanti .ztbd li .text .left p:first-child i{
+    color: #aa2113;
+}
+/* 定位文字 */
+.zhuanti .ztbd .wenzi{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 0 15px;
+    left: 0;
+    bottom: 0;
+    width: 405px;
+    height: 90px;
+    /* background-color: #05d227; */
+    /* 渐变写法*/
+    background-image: linear-gradient(180deg, rgba(137, 137, 137, 0) 0%,
+    rgba(0,0,0,0.90));
+    color: #fff;
+}
+.zhuanti .ztbd .wenzi .left h4{
+    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.zhuanti .ztbd .wenzi .right{
+    padding: 0 7px;
+    height: 25px;
+    background-color: #fff;
+    color: #aa2113;
+    line-height: 25px;
+    text-align: center;
+    font-size: 18px;
+}
+.zhuanti .ztbd .wenzi .right i{
+    font-size: 15px;
+}

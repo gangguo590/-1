@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三天</title>
+    <style>
+        /* <!-- 先盒子后文字再圆角等属性 --> */
+        *{
+            padding: 0;
+            margin: 0;
+            /* 内减模式 */
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f1f1f1;
+        }
+        .product{
+            width: 270px;
+            height: 253px;
+            background-color: #fff;
+            /* 两值写法 */
+            margin: 50px auto;
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        /* 后代选择器写法 */
+        .product img{
+            width: 100px;
+            height: 100px;
+            /* 整个圆角 */
+            border-radius: 50%;
+        }
+        .product h4{
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-size: 18px;
+            color: #333;
+            font-weight: 400;
+            font-family: 楷体;
+        }
+        .product p{
+            font-family: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+     <div class="product">
+        <img src="./图片/mdao1.jpg" alt="">
+        <h4>魔道祖师</h4>
+        <p>墨香铜臭</p>
+     </div>
+</body>
+</html>
